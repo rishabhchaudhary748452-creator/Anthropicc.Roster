@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anthropicc.Roster</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#dff3ff;
+    color:#172033;
+}
+
+/* Header */
+.header{
+    background:#063b73;
+    color:white;
+    text-align:center;
+    padding:38px 15px 32px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.18);
+}
+
+.logo{
+    font-size:38px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#000000;
+    background:white;
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+.header p{
+    margin:8px 0 0;
+    font-size:15px;
+    opacity:.9;
+}
+
+/* Main */
+.container{
+    max-width:650px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.heading{
+    text-align:center;
+    color:#063b73;
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+/* Options */
+.option{
+    display:block;
+    width:100%;
+    padding:20px;
+    margin:15px 0;
+    border:none;
+    border-radius:14px;
+    background:white;
+    color:#063b73;
+    font-size:18px;
+    font-weight:bold;
+    text-align:left;
+    text-decoration:none;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:.2s;
+}
+
+.option:hover{
+    transform:translateY(-3px);
+    box-shadow:0 7px 18px rgba(0,0,0,.18);
+    background:#f7fcff;
+}
+
+.icon{
+    font-size:25px;
+    margin-right:12px;
+}
+
+/* Info box */
+.info{
+    background:#ffffff;
+    border-left:5px solid #063b73;
+    padding:18px;
+    margin-top:30px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.info h3{
+    margin-top:0;
+    color:#063b73;
+}
+
+/* Footer */
+.footer{
+    margin-top:50px;
+    background:#063b73;
+    color:white;
+    text-align:center;
+    padding:25px 18px;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.footer strong{
+    color:#ffffff;
+}
+
+@media(max-width:500px){
+    .logo{
+        font-size:28px;
+    }
+
+    .heading{
+        font-size:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+    <div class="logo">
+        Anthropicc.Roster
+    </div>
+
+    <p>Secure File Management Portal</p>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <div class="heading">
+        Available Files & Options
+    </div>
+
+
+    <a class="option" href="login.html">
+        <span class="icon">📅</span>
+        Monthly Roster
+    </a>
+
+
+    <a class="option" href="login.html">
+        <span class="icon">📊</span>
+        Driven Data
+    </a>
+
+
+    <a class="option" href="login.html">
+        <span class="icon">🔐</span>
+        Login Options
+    </a>
+
+
+    <a class="option" href="login.html">
+        <span class="icon">📁</span>
+        Other Data
+    </a>
+
+
+    <div class="info">
+
+        <h3>ℹ️ Information</h3>
+
+        <p>
+            Select an option above to continue.
+            Authorized users may access the available
+            files after completing the required login.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER / DISCLAIMER -->
+<div class="footer">
+
+    <strong>Disclaimer</strong><br>
+
+    This portal is intended only for authorized users.
+    All files and information available through this
+    portal should be used only for legitimate purposes.
+
+    <br><br>
+
+    Unauthorized access, sharing or distribution of
+    restricted files is not permitted.
+
+    <br><br>
+
+    © 2026 Anthropicc.Roster — All Rights Reserved
+
+</div>
+
+</body>
+</html>
