@@ -89,6 +89,7 @@ input{
 #error{
     color:#d00000;
     text-align:center;
+    font-weight:bold;
     margin-top:15px;
 }
 
@@ -122,8 +123,8 @@ input{
         <input
             type="text"
             id="username"
-            value="AP655755"
             placeholder="Enter Employee ID"
+            autocomplete="off"
         >
 
         <label>Password</label>
@@ -131,8 +132,8 @@ input{
         <input
             type="password"
             id="password"
-            value="RISH0908"
             placeholder="Enter Password"
+            autocomplete="off"
         >
 
         <button class="login-btn" onclick="login()">
@@ -154,7 +155,7 @@ input{
 function login(){
 
     const employeeId =
-        document.getElementById("username").value;
+        document.getElementById("username").value.trim();
 
     const password =
         document.getElementById("password").value;
@@ -167,7 +168,7 @@ function login(){
     }else{
 
         document.getElementById("error").innerText =
-        "Invalid Employee ID or Password";
+        "Invalid Login Credentials";
 
     }
 }
@@ -175,4 +176,4 @@ function login(){
 </script>
 
 </body>
-</html
+</html>
