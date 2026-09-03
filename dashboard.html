@@ -7,150 +7,285 @@
 <title>Anthropicc.Roster - Dashboard</title>
 
 <style>
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#dff3ff;
-    color:#172033;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dff3ff;
+    color: #172033;
 }
 
-.header{
-    background:#063b73;
-    color:white;
-    text-align:center;
-    padding:30px 15px;
+/* HEADER */
+.header {
+    background: #063b73;
+    color: white;
+    text-align: center;
+    padding: 32px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
-.logo{
-    display:inline-block;
-    background:white;
-    color:#000;
-    padding:10px 22px;
-    border-radius:10px;
-    font-size:30px;
-    font-weight:bold;
+.logo {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.container{
-    max-width:650px;
-    margin:40px auto;
-    padding:20px;
+/* MAIN */
+.container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
-.welcome{
-    background:white;
-    border-radius:14px;
-    padding:22px;
-    text-align:center;
-    box-shadow:0 4px 14px rgba(0,0,0,.12);
-    margin-bottom:25px;
+/* LOGIN INFO */
+.welcome {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    margin-bottom: 25px;
 }
 
-.welcome h2{
-    color:#063b73;
-    margin:0 0 10px;
+.welcome h2 {
+    color: #063b73;
+    margin: 0 0 10px;
 }
 
-.file-box{
-    background:white;
-    border-radius:16px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
+.welcome p {
+    margin: 5px 0;
+    color: #555;
 }
 
-.file-icon{
-    font-size:55px;
+/* FILE BOX */
+.file-box {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
 }
 
-.file-name{
-    font-size:20px;
-    font-weight:bold;
-    color:#063b73;
-    margin:15px 0 22px;
+.file-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
 }
 
-.download{
-    display:inline-block;
-    background:#063b73;
-    color:white;
-    text-decoration:none;
-    padding:14px 35px;
-    border-radius:9px;
-    font-size:17px;
-    font-weight:bold;
+.file-name {
+    font-size: 21px;
+    font-weight: bold;
+    color: #063b73;
+    margin: 15px 0 8px;
 }
 
-.download:hover{
-    background:#052f5b;
+.file-type {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
 }
 
-.logout{
-    display:block;
-    margin:25px auto 0;
-    border:0;
-    background:#555;
-    color:white;
-    padding:10px 25px;
-    border-radius:7px;
-    cursor:pointer;
+/* DOWNLOAD */
+.download {
+    display: inline-block;
+    background: #063b73;
+    color: white;
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s;
 }
 
-.footer{
-    margin-top:45px;
-    background:#063b73;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:12px;
-    line-height:1.6;
+.download:hover {
+    background: #052f5b;
+    transform: translateY(-2px);
+}
+
+/* LOGOUT */
+.logout {
+    display: block;
+    margin: 25px auto 0;
+    border: none;
+    background: #555;
+    color: white;
+    padding: 11px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout:hover {
+    background: #333;
+}
+
+/* INFORMATION */
+.info {
+    background: white;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #063b73;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.info h3 {
+    color: #063b73;
+    margin-top: 0;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 45px;
+    background: #063b73;
+    color: white;
+    text-align: center;
+    padding: 23px 18px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media(max-width:500px) {
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .file-box {
+        padding: 25px 18px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
-    <div class="logo">Anthropicc.Roster</div>
-</div>
 
-<div class="container">
-
-    <div class="welcome">
-        <h2>Login by Rishabh Chaudhary</h2>
-        <p>Welcome to the Monthly Roster Portal</p>
+    <div class="logo">
+        Anthropicc.Roster
     </div>
 
+    <p>Monthly Roster Portal</p>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+
+    <!-- LOGIN INFORMATION -->
+    <div class="welcome">
+
+        <h2>Login by Rishabh Chaudhary</h2>
+
+        <p>
+            Welcome to the Monthly Roster Portal
+        </p>
+
+        <p>
+            Authorized access granted.
+        </p>
+
+    </div>
+
+
+    <!-- FILE -->
     <div class="file-box">
 
-        <div class="file-icon">📊</div>
+        <div class="file-icon">
+            📊
+        </div>
 
         <div class="file-name">
             Anthropicc.Roster
         </div>
 
-        <a class="download"
-           href="href="roster.xlsx""
-           download>
-            ⬇ Download File
+        <div class="file-type">
+            Excel Spreadsheet (.xlsx)
+        </div>
+
+
+        <!-- DOWNLOAD BUTTON -->
+        <a
+            class="download"
+            href="roster.xlsx"
+            download="roster.xlsx">
+            ⬇ Download Excel File
         </a>
+
+
+        <!-- LOGOUT -->
+        <button
+            class="logout"
+            onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+
+    <!-- INFORMATION -->
+    <div class="info">
+
+        <h3>ℹ️ File Information</h3>
+
+        <p>
+            This section provides access to the current
+            Monthly Roster Excel file.
+        </p>
+
+        <p>
+            Please download the file only when required
+            and keep the downloaded copy secure.
+        </p>
 
     </div>
 
 </div>
 
+
+<!-- FOOTER -->
 <div class="footer">
-    <strong>Disclaimer</strong><br>
+
+    <strong>Disclaimer</strong>
+    <br>
+
     This portal is intended for authorized users only.
-    Files available through this portal should not be
-    shared or distributed without permission.
+    Unauthorized access, copying, sharing or distribution
+    of files is not permitted.
+
     <br><br>
+
     © 2026 Anthropicc.Roster
+    <br>
+    All Rights Reserved.
+
 </div>
+
+
+<script>
+
+function logout() {
+
+    window.location.href = "index.html";
+
+}
+
+</script>
 
 </body>
 </html>
